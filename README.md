@@ -49,5 +49,5 @@ Special attention is given to multi-cycle instructions like `MOVR` and `MOVRHS`,
 
 ## Demo 
 
-![Setup](./photos/config.png)
+![Setup](./photos/config.jpg)
 
