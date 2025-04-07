@@ -44,4 +44,4 @@ The datapath is designed to execute a custom 8-bit instruction set tailored for 
 
 The datapath is fully controlled by a centralized FSM, with each instruction's behavior determined by opcode decoding and control signal activation.
 
-![FSM Diagram](./photos/FSM.png)
+![FSM Diagram](./photos/datapath.png)
