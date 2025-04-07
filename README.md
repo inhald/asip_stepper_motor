@@ -28,6 +28,8 @@ The controller uses a hardwired finite-state machine to manage instruction seque
 
 Special attention is given to multi-cycle instructions like `MOVR` and `MOVRHS`, which execute over multiple FSM states, update the TEMP register, and conditionally start the delay counter. 
 
+![FSM Diagram](./photos/FSM.png)
+
 ## Datapath Architecture
 
 The datapath is designed to execute a custom 8-bit instruction set tailored for stepper motor control. The design is modular and supports arithmetic, logic, and control operations in a single-cycle execution model. Key components include:
