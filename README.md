@@ -46,3 +46,8 @@ The controller uses a hardwired finite-state machine to manage instruction seque
 Special attention is given to multi-cycle instructions like `MOVR` and `MOVRHS`, which execute over multiple FSM states, update the TEMP register, and conditionally start the delay counter. 
 
 ![FSM Diagram](./photos/FSM.png)
+
+## Demo 
+
+![Setup](./photos/config.png)
+
