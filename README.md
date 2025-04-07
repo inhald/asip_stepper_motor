@@ -15,7 +15,7 @@ The processor supports a small, efficient instruction set tailored to stepper mo
 The instruction encoding is as follows:
 ![Instruction Set](./photos/instruction_set.png)
 
-## Datapath Architecture
+## Finite State Machine (FSM)
 
 The controller uses a hardwired finite-state machine to manage instruction sequencing and execution. The FSM has distinct states for:
 
@@ -27,5 +27,19 @@ The controller uses a hardwired finite-state machine to manage instruction seque
 6. **BRANCH / DELAY**: Handles conditional branching and delay counter execution for timing-sensitive instructions.
 
 Special attention is given to multi-cycle instructions like `MOVR` and `MOVRHS`, which execute over multiple FSM states, update the TEMP register, and conditionally start the delay counter. 
+
+## Datapath Architecture
+
+The datapath is designed to execute a custom 8-bit instruction set tailored for stepper motor control. The design is modular and supports arithmetic, logic, and control operations in a single-cycle execution model. Key components include:
+
+- **Instruction Memory**: Stores program instructions; addressed by the Program Counter (PC).
+- **Register File**: Three general-purpose registers (RF[0] to RF[2]) and one delay register (RF[3]).
+- **ALU**: Performs arithmetic operations like addition, subtraction, and stepper motor direction logic.
+- **Operand Multiplexers**: Dynamically select inputs to the ALU (PC, immediate, register values).
+- **TEMP Register**: Holds intermediate values for instructions such as `MOVR` and `MOVRHS`.
+- **Stepper ROM**: Outputs 4-bit stepper control signals based on the state in the instruction execution.
+- **Result Multiplexer**: Selects the destination of ALU or ROM output for register write-back or motor control.
+
+The datapath is fully controlled by a centralized FSM, with each instruction's behavior determined by opcode decoding and control signal activation.
 
 ![FSM Diagram](./photos/FSM.png)
