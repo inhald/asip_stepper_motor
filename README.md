@@ -15,5 +15,17 @@ The processor supports a small, efficient instruction set tailored to stepper mo
 The instruction encoding is as follows:
 ![Instruction Set](./photos/instruction_set.png)
 
+## Datapath Architecture
 
-![Instruction Set](./photos/instruction_set.png)
+The controller uses a hardwired finite-state machine to manage instruction sequencing and execution. The FSM has distinct states for:
+
+1. **RESET**: Initializes PC and clears all registers.
+2. **FETCH**: Loads the instruction from memory.
+3. **DECODE & OPERAND FETCH**: Decodes opcode and fetches operands.
+4. **EXECUTE**: Executes arithmetic/logic/motor control logic.
+5. **WRITEBACK / CONTROL**: Updates register file or stepper motor output.
+6. **BRANCH / DELAY**: Handles conditional branching and delay counter execution for timing-sensitive instructions.
+
+Special attention is given to multi-cycle instructions like `MOVR` and `MOVRHS`, which execute over multiple FSM states, update the TEMP register, and conditionally start the delay counter. 
+
+![FSM Diagram](./photos/FSM.png)
