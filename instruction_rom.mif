@@ -1,0 +1,77 @@
+-- Copyright (C) 2017  Intel Corporation. All rights reserved. 
+-- Your use of Intel Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Intel Program License 
+-- Subscription Agreement, the Intel Quartus Prime License Agreement, 
+-- the Intel FPGA IP License Agreement, or other applicable license 
+-- agreement, including, without limitation, that your use is for 
+-- the sole purpose of programming logic devices manufactured by 
+-- Intel and sold by Intel or its authorized distributors.  Please 
+-- refer to the applicable agreement for further details. 
+
+-- Custom Python generated Memory Initialization File (.mif) 
+
+WIDTH=8;
+DEPTH=256;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	0	:	01100000;
+	1	:	01100001;
+	2	:	01100011;
+	3	:	01000010;
+	4	:	01111100;
+	5	:	01000000;
+	6	:	01010011;
+	7	:	01110100;
+	8	:	01100000;
+	9	:	01001010;
+	10	:	11000101;
+	11	:	00100100;
+	12	:	10100010;
+	13	:	10011101;
+	14	:	01100000;
+	15	:	01001010;
+	16	:	11000101;
+	17	:	00100100;
+	18	:	10100010;
+	19	:	10011101;
+	20	:	11111111;
+	21	:	11111111;
+	22	:	11111111;
+	23	:	11111111;
+	24	:	11111111;
+	25	:	11111111;
+	26	:	11111111;
+	27	:	11111111;
+	28	:	01000000;
+	29	:	01011101;
+	30	:	01110100;
+	31	:	01100000;
+	32	:	01001010;
+	33	:	11000101;
+	34	:	00100100;
+	35	:	10100010;
+	36	:	10011101;
+	37	:	01100000;
+	38	:	01001010;
+	39	:	11000101;
+	40	:	00100100;
+	41	:	10100010;
+	42	:	10011101;
+	43	:	11111111;
+	44	:	11111111;
+	45	:	11111111;
+	46	:	11111111;
+	47	:	11111111;
+	48	:	11111111;
+	49	:	11111111;
+	50	:	11111111;
+	51	:	11001001;
+	[52..255]	:	00000000;
+END;
