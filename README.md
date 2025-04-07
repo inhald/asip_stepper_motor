@@ -51,3 +51,5 @@ Special attention is given to multi-cycle instructions like `MOVR` and `MOVRHS`,
 
 ![Setup](./photos/config.jpg)
 
+Video can be found [here](https://www.youtube.com/watch?v=QXHWOis2sxk).
+
